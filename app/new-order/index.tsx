@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { CustomSelect } from "../../components/selects/custom-select";
 import { colors } from "../../theme/color-palette";
 
 type Props = {};
@@ -7,7 +8,8 @@ type Props = {};
 const NewOrder = (props: Props) => {
   return (
     <View style={styles.container}>
-      <Text>NewOrder</Text>
+      <Text>Neue Bestellung</Text>
+      <CustomSelect />
     </View>
   );
 };
