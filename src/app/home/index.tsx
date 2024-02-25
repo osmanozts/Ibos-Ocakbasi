@@ -1,7 +1,8 @@
 import { router } from "expo-router";
 import { StyleSheet, View } from "react-native";
-import { CtaButton } from "../components/buttons/cta-button";
-import { colors } from "../theme/color-palette";
+import { CtaButton } from "../../components/buttons/cta-button";
+import { supabase } from "../../lib/supabase";
+import { colors } from "../../theme/color-palette";
 
 type Props = {};
 
@@ -21,6 +22,7 @@ export default function HomeDashboard(props: Props) {
           text="Kasse"
           onPress={() => router.navigate({ pathname: "checkout" })}
         />
+        <CtaButton text="Ausloggen" onPress={() => supabase.auth.signOut()} />
       </View>
     </View>
   );
